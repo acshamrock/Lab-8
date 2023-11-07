@@ -1,15 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const alertButton = document.getElementById("entrybutton");
-  const textInput = document.getElementById("entryinput");
-  const textOutput = document.getElementById("textoutput");
-
-  
-  alertButton.addEventListener("click", function () {  
-    const inputValue = textInput.value;
-    const alertMessage = "Brendan Dwyer: " + inputValue;
-    alert(alertMessage);
-
-    textOutput.textContent = inputValue;
-  });
-});
-
+function init(){
+  var button = document.getElementById('entrybutton');
+  function showMeText(){
+    var textbox = document.getElementById('entryinput');
+    document.getElementById('textoutput').innerHTML = textbox.value;
+    alert("Brendan Dwyer: " + textbox.value);
+  }
+  button.addEventListener('click', showMeText);
+  }  
+window.addEventListener('load', init);
